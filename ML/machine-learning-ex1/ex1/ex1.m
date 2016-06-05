@@ -44,7 +44,12 @@ m = length(y); % number of training examples
 
 % Plot Data
 % Note: You have to complete the code in plotData.m
-plotData(X, y);
+plot(X, y, 'xr', 'MarkerSize', 10);
+ % Plot the data
+ylabel('Profit in $10,000s');
+ % Set the y−axis label
+xlabel('Population of City in 10,000s');
+ % Set the x−axis label
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
@@ -54,6 +59,7 @@ fprintf('Running Gradient Descent ...\n')
 
 X = [ones(m, 1), data(:,1)]; % Add a column of ones to x
 theta = zeros(2, 1); % initialize fitting parameters
+
 
 % Some gradient descent settings
 iterations = 1500;
